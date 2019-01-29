@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1548772793836" clover="3.2.0">
+  <project timestamp="1548772793836" name="All files">
+    <metrics statements="89" coveredstatements="69" conditionals="10" coveredconditionals="6" methods="17" coveredmethods="15" elements="116" coveredelements="90" complexity="0" loc="89" ncloc="89" packages="4" files="6" classes="6">
+      <package name="scripts">
+        <metrics statements="20" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="populateDatabase.ts" path="/Users/n0159480/bootcamp/assignments/scrape-it-ts/backend/scripts/populateDatabase.ts">
+          <metrics statements="20" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="server">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="config.ts" path="/Users/n0159480/bootcamp/assignments/scrape-it-ts/backend/server/config.ts">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="server.items">
+        <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <file name="item.model.ts" path="/Users/n0159480/bootcamp/assignments/scrape-it-ts/backend/server/items/item.model.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+        </file>
+        <file name="items.controller.ts" path="/Users/n0159480/bootcamp/assignments/scrape-it-ts/backend/server/items/items.controller.ts">
+          <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="server.users">
+        <metrics statements="48" coveredstatements="48" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="11"/>
+        <file name="user.model.ts" path="/Users/n0159480/bootcamp/assignments/scrape-it-ts/backend/server/users/user.model.ts">
+          <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="36" count="2" type="stmt"/>
+          <line num="47" count="6" type="stmt"/>
+          <line num="48" count="6" type="stmt"/>
+          <line num="53" count="3" type="stmt"/>
+          <line num="54" count="3" type="stmt"/>
+          <line num="59" count="6" type="stmt"/>
+          <line num="60" count="6" type="stmt"/>
+          <line num="62" count="6" type="stmt"/>
+          <line num="68" count="6" type="stmt"/>
+          <line num="73" count="2" type="stmt"/>
+          <line num="75" count="2" type="stmt"/>
+        </file>
+        <file name="users.controller.ts" path="/Users/n0159480/bootcamp/assignments/scrape-it-ts/backend/server/users/users.controller.ts">
+          <metrics statements="33" coveredstatements="33" conditionals="6" coveredconditionals="6" methods="8" coveredmethods="8"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="10" count="3" type="stmt"/>
+          <line num="12" count="3" type="stmt"/>
+          <line num="14" count="3" type="cond" truecount="4" falsecount="0"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="21" count="1" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="27" count="5" type="stmt"/>
+          <line num="28" count="5" type="stmt"/>
+          <line num="29" count="5" type="stmt"/>
+          <line num="30" count="5" type="stmt"/>
+          <line num="32" count="5" type="stmt"/>
+          <line num="33" count="4" type="stmt"/>
+          <line num="35" count="4" type="stmt"/>
+          <line num="36" count="4" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="42" count="2" type="stmt"/>
+          <line num="44" count="3" type="stmt"/>
+          <line num="45" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="49" count="2" type="stmt"/>
+          <line num="50" count="2" type="stmt"/>
+          <line num="55" count="2" type="stmt"/>
+          <line num="56" count="1" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="60" count="2" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

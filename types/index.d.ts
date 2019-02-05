@@ -1,9 +1,11 @@
 
-declare module App {
+declare module Stories {
 
   interface Item {
-    name: string;
-    value: number;
+    headLine: string;
+    url: string;
+    picture: string;
+    comments: string[];
   }
 
 }

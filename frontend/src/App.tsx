@@ -48,7 +48,7 @@ class Stories extends React.Component<{}, StoryState> {
                                     <div className="card" key={index}>
                                         <div className="row no-gutters">
                                             <div className="col-auto">
-                                                <img src={item.picture} className="img-fluid" alt="" height="100" />
+                                                <img src={item.picture ? item.picture : "/nflicon.svg"} className="img-fluid" alt="" height="100px" width="100px" />
                                             </div>
                                             <div className="col">
                                                 <div className="card-block px-2">
@@ -58,7 +58,7 @@ class Stories extends React.Component<{}, StoryState> {
                                         </div>
                                         <div className="card-footer w-100 text-muted">
                                             <ul>
-                                                {item.comments}
+                                                {item.comments ? item.comments.map((el,comIndex) => <li key={comIndex}>{el}</li>) : ""}
                                             </ul>
                                             <form onSubmit={this.handleSubmit}>
                                                 <div className="form-group">
@@ -73,7 +73,7 @@ class Stories extends React.Component<{}, StoryState> {
                                     </div>)}
                             </div>
                         </div>
-                        <button disabled={this.state.isRequesting} onClick={this.getTestData}>Scrape It!</button>
+                        <button disabled={this.state.isRequesting} onClick={this.scrapeIt}>Scrape It!</button>
                         <button disabled={this.state.isRequesting} onClick={this.logout}>Log out</button>
                     </div>
                 ) : (
@@ -126,6 +126,17 @@ class Stories extends React.Component<{}, StoryState> {
     };
 
     private getTestData = async (): Promise<void> => {
+        try {
+            const response = await axios.get<Stories.Item[]>("/api/nfl", { headers: session.getAuthHeaders() });
+            this.setState({ data: response.data });
+        } catch (error) {
+            this.setState({ error: "Something went wrong" });
+        } finally {
+            this.setState({ isRequesting: false });
+        }        
+    }
+
+    private scrapeIt = async (): Promise<void> => {
         try {
             this.setState({ error: "" });
             await axios.get<Stories.Item[]>("/api/nfl/scrape", { headers: session.getAuthHeaders() });

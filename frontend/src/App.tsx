@@ -2,7 +2,6 @@ import axios from "axios";
 import * as React from 'react';
 import './App.css';
 import * as session from './session';
-import logo from './logo.svg';
 
 export interface StoryState {
     email: string;
@@ -36,7 +35,7 @@ class Stories extends React.Component<{}, StoryState> {
         return (
             <div className="App">
                 <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
+                    <img src="nfl-logo.jpg" alt="logo" height="150px" />
                     <h1 className="App-title">NFL Stories - built on MERN!</h1>
                 </header>
                 <div className="App-error">{this.state.error}</div>
@@ -58,7 +57,7 @@ class Stories extends React.Component<{}, StoryState> {
                                         </div>
                                         <div className="card-footer w-100 text-muted">
                                             <ul>
-                                                {item.comments ? item.comments.map((el,comIndex) => <li key={comIndex}>{el}</li>) : ""}
+                                                {item.comments ? item.comments.map((el,comIndex) => <li key={comIndex}>{el} (<a href="#" onClick={() => this.handleCommentRemove(item.headLine, el)}>Remove</a>)</li>) : ""}
                                             </ul>
                                             <form onSubmit={this.handleSubmit}>
                                                 <div className="form-group">
@@ -99,9 +98,11 @@ class Stories extends React.Component<{}, StoryState> {
     }
 
     private handleSubmit = async(): Promise<void> => {
-        const { contentHeadLine, contentMessage } = this.state;
-        console.log(contentHeadLine, contentMessage);
-        await axios.put("/api/nfl/update/", {contentHeadLine, contentMessage}, { headers: session.getAuthHeaders() });
+        const { contentHeadLine, contentMessage, email } = this.state;
+        const comment = `${contentMessage} by Anonymous`;
+        console.log(`Email: ${email}`);
+        await axios.put("/api/nfl/update/", {contentHeadLine, comment}, { headers: session.getAuthHeaders() });
+        this.getTestData();  
     }
 
     private handleLogin = async (): Promise<void> => {
@@ -119,6 +120,11 @@ class Stories extends React.Component<{}, StoryState> {
             this.setState({ isRequesting: false });
         }
     };
+
+    private handleCommentRemove = async (headLine: string, comment: string): Promise<void> => {
+        await axios.put("/api/nfl/removecomment/", {headLine, comment}, { headers: session.getAuthHeaders() });  
+        this.getTestData();  
+    }
 
     private logout = (): void => {
         session.clearSession();

@@ -16,7 +16,7 @@ router.route("/update/").put(authorize, bodyParser.json(), (request, response) =
     console.log("hey");
     try {
         const headLine = request.body.contentHeadLine;
-        const comments = request.body.contentMessage;
+        const comments = request.body.comment;
 
         NFL.findOneAndUpdate({headLine: headLine}, { $push: { comments: comments } }, {new: true}, (err, doc) => {
             if (err) {
@@ -24,6 +24,24 @@ router.route("/update/").put(authorize, bodyParser.json(), (request, response) =
             }
         
             return response.status(200).json("Story updated!");           
+        });
+    } catch (error) {
+        return response.status(400).send(error);
+    }
+});
+
+router.route("/removecomment/").put(authorize, bodyParser.json(), (request, response) => {
+    console.log("hey");
+    try {
+        const headLine = request.body.headLine;
+        const comment = request.body.comment;
+
+        NFL.findOneAndUpdate({headLine: headLine}, { $pull: { comments: { $in: [comment] } } }, {new: true}, (err, doc) => {
+            if (err) {
+                console.log("Something wrong when updating data!");
+            }
+        
+            return response.status(200).json("Comment updated!");           
         });
     } catch (error) {
         return response.status(400).send(error);

@@ -14,7 +14,6 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "postinstall": "npm run build",
     "test": "react-scripts-ts test --env=jsdom --coverage",
     "test:watch": "react-scripts-ts test --env=jsdom --coverage --watchAll"
@@ -24,7 +23,6 @@
     "@types/axios": "^0.14.0",
     "@types/enzyme": "^3.1.13",
     "@types/enzyme-adapter-react-16": "^1.0.3",
-    "@types/jest": "^24.0.0",
     "@types/node": "^10.5.2",
     "@types/react": "^16.4.6",
     "@types/react-dom": "^16.0.6",
@@ -33,7 +31,6 @@
     "coveralls": "^3.0.2",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
-    "jest-localstorage-mock": "^2.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts-ts": "2.16.0",

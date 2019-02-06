@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
-    "postinstall": "npm run build",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@types/app-shared-types": "file:../types",

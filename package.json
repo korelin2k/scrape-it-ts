@@ -12,9 +12,8 @@
     "build": "npm run build:backend && npm run build:frontend",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
-    "coveralls": "npm run coveralls:backend && npm run coveralls:frontend",
+    "coveralls": "npm run coveralls:backend",
     "coveralls:backend": "cd backend && npm run coveralls",
-    "coveralls:frontend": "cd frontend && npm run coveralls",
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "start:backend": "cd backend && npm start",
     "start:frontend": "cd frontend && npm start",
@@ -23,7 +22,7 @@
     "test:frontend": "cd frontend && npm run test",
     "serve": "cd backend && node build/server.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "concurrently": "^4.0.1"
   }
 }

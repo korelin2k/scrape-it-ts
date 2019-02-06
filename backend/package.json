@@ -5,6 +5,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "postinstall": "npm run build",
     "test": "jest --coverage --colors",
     "test:watch": "jest --coverage --colors --watchAll",
     "start": "webpack --watch"

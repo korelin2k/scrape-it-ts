@@ -12,13 +12,13 @@ router.route("/").get(authorize, async (request, response) => {
     return response.status(200).json(stories);
 });
 
-router.route("/update/").put(authorize, bodyParser.json(), async (request, response) => {
+router.route("/update/").put(authorize, bodyParser.json(), (request, response) => {
     console.log("hey");
     try {
         const headLine = request.body.contentHeadLine;
         const comments = request.body.contentMessage;
 
-        await NFL.findOneAndUpdate({headLine: headLine}, { $push: { comments: comments } }, {new: true}, (err, doc) => {
+        NFL.findOneAndUpdate({headLine: headLine}, { $push: { comments: comments } }, {new: true}, (err, doc) => {
             if (err) {
                 console.log("Something wrong when updating data!");
             }

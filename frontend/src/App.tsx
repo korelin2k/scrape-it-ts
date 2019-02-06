@@ -29,6 +29,7 @@ class Stories extends React.Component<{}, StoryState> {
 
     public componentDidMount() {
         this.setState({ isLoggedIn: session.isSessionValid() });
+        this.getTestData();
     }
 
     public render() {
@@ -127,7 +128,7 @@ class Stories extends React.Component<{}, StoryState> {
     private getTestData = async (): Promise<void> => {
         try {
             this.setState({ error: "" });
-            await axios.get<Stories.Item[]>("/api/nfl/scrape", { headers: session.getAuthHeaders() });
+            // await axios.get<Stories.Item[]>("/api/nfl/scrape", { headers: session.getAuthHeaders() });
             const response = await axios.get<Stories.Item[]>("/api/nfl", { headers: session.getAuthHeaders() });
             console.log(response);
             this.setState({ data: response.data });

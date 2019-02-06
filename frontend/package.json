@@ -15,8 +15,6 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "postinstall": "npm run build",
-    "test": "react-scripts-ts test --env=jsdom --coverage",
-    "test:watch": "react-scripts-ts test --env=jsdom --coverage --watchAll"
   },
   "dependencies": {
     "@types/app-shared-types": "file:../types",
